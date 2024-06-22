@@ -1,0 +1,25 @@
+{
+  "name": "halgory.com",
+  "version": "1.0.0",
+  "description": "Stolen from Zerebos. Built using [11ty](https://www.11ty.dev) and automatically deploys using GitHub Actions.",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpastorhall/halgory.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gpastorhall/halgory.com/issues"
+  },
+  "homepage": "https://github.com/gpastorhall/halgory.com#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "devDependencies": {}
+}
