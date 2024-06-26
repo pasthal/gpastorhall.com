@@ -1,20 +1,9 @@
-const { execSync } = require('child_process');
-const fs = require('fs-extra');
-
 module.exports = function (eleventyConfig) {
 
-    // Run Linkstack build script
-    eleventyConfig.on('beforeBuild', () => {
-        console.log("Building Linkstack...");
-        execSync('cd linkstack && npm run build', { stdio: 'inherit' });
-        console.log("Linkstack build complete.");
-
-        // Copy Linkstack build output to main output
-        fs.copySync('linkstack/public', 'dist/linkstack');
-    });
-
     // taken from https://github.com/rauenzi/Zerebos.com/blob/main/.eleventy.js
-	/*
+
+    /*
+
     // Folders to copy to output folder
     eleventyConfig.addPassthroughCopy("assets");
     eleventyConfig.addPassthroughCopy("src/scripts.js");
@@ -53,13 +42,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("projects", function (collection) {
         return getPosts(collection);
     });
-	*/
-    return {/*
+*/
+    return {
+        /*
         htmlTemplateEngine: "njk",
-        markdownTemplateEngine: "njk",*/
+        markdownTemplateEngine: "njk",
+        */
         dir: {
             input: "src",
             output: "dist",
         }
-    };
+    }
 };
